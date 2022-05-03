@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang=fr>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Formulaire de livre</title>
+</head>
+
+<body>
+    <form action="/application/affichage/" method="POST">
+        {% csrf_token %}
+        <!-- code permettant de protéger votre application en évitant
+de rejouer un formulaire avec des droits différents -->
+        {{ form.as_ul }}
+        <!-- permet d’afficher tous les champs sous forme d’une liste
+-->
+        <input type="submit" value="envoyer les␣données" \>
+    </form>
+</body>
