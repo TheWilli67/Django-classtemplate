@@ -1,0 +1,5 @@
+<form method="post" action="/application/update/{{livre.id}}">
+    {% csrf_token %}
+    {{ form.as_ul }}
+    <input type="submit" value="envoyer les données" \>
+</form>

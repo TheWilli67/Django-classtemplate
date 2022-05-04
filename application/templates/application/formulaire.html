@@ -7,6 +7,11 @@
 </head>
 
 <body>
+    <h1>Mediathèque</h1>
+
+    {% block taskbar %}
+    <a href="application/">Accueil</a>
+    {% endblock %}
     <form action="/application/affichage/" method="POST">
         {% csrf_token %}
         <!-- code permettant de protéger votre application en évitant
@@ -14,6 +19,6 @@ de rejouer un formulaire avec des droits différents -->
         {{ form.as_ul }}
         <!-- permet d’afficher tous les champs sous forme d’une liste
 -->
-        <input type="submit" value="envoyer les␣données" \>
+        <input type="submit" value="envoyer les données" \>
     </form>
 </body>

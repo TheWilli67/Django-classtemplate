@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <link href="/application/templates/index.css" rel="stylesheet">
+    <title>{% block title %}Mon Site {% endblock %} </title>
+</head>
+
+<body>
+    <div id="content">
+        {% block content %}
+        <h1>Mediathèque</h1>
+        {% endblock %}
+    </div>
+    <aside id="taskbar">
+        {% block taskbar %}
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="application/index">Index</a></li>
+        </ul>
+        {% endblock %}
+    </aside>
+</body>
+
+</html>
