@@ -11,10 +11,10 @@ class Livre(models.Model):
     resume = models.TextField(null=True, blank=True)
 
 
-def __str__(self):
-    chaine = f"{self.titre} écrit par {self.auteur} édité le {self.date_parution}"
-    return chaine
+    def __str__(self):
+        chaine = f"{self.titre} écrit par {self.auteur} édité le {self.date_parution}"
+        return chaine
 
 
-def dico(self):
-    return {"titre": self.titre, "auteur": self.auteur, "nombre_pages": self.nombre_pages, "resume": self.resume}
+    def dico(self):
+        return {"titre": self.titre, "auteur": self.auteur, "nombre_pages": self.nombre_pages, "resume": self.resume}

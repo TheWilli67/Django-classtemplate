@@ -11,7 +11,7 @@
 <body>
     {% for i in livre %}
     <p> ID :{{i.id}} <br> titre : {{i.titre}} <br> Auteur : {{i.auteur}} <br><a href="/application/affichage/{{i.id}}"> aller a ce livre</a> </p>
-    <a href="/application/update/{{i.id}}"> modifier les entrées</a></li>
+    <a href="/application/update/{{i.id}}"> modifier cette entrées</a></li> <a href="/application/delete/{{i.id}}">supprimer cette entrée</a></li>
     {% endfor %}
 </body>
 

@@ -1,5 +1,4 @@
 from .form import LivreForm
-from .models import dico
 from django.forms import ModelForm
 from django.utils.translation import gettext_lazy as _
 from . import models
@@ -62,3 +61,8 @@ def updatetraitement(request, id):
         return render(request, 'application/affichage.html', {'Livre': Livre})
     else:
         return render(request, 'application/formulaire.html', {'form': pForm})
+
+def delete(request, id):
+    livre = models.Livre.objects.get(pk=id)
+    livre.delete()
+    return HttpResponseRedirect('/application/')
